@@ -19,10 +19,17 @@ input[type="reset"] {
 
 :root {
   --border-radius: 10px;
-  --header-color: #a68567;
-  --content-color: #a99989;
-  --books-color: #4c372c;
-  --footer-color: #c7c4c4;
+  --header-color: #5a5a5a;
+  --content-color: white;
+  --books-color: #d3d3d3;
+  --footer-color: #d3d3d3;
+  --header-font-color: ;
+  --content-font-color: ;
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 40px;
 }
 
 body {
@@ -38,12 +45,13 @@ body {
   grid-template-rows: repeat(8, 1fr);
   grid-template-areas:
     "hd hd hd hd hd hd hd hd hd"
-    "sd sd main main main main main main main"
-    "sd sd main main main main main main main"
-    "sd sd main main main main main main main"
-    "sd sd main main main main main main main"
-    "sd sd main main main main main main main"
-    "sd sd main main main main main main main"
+    "sd main main main main main main main main"
+    "sd main main main main main main main main"
+    "sd main main main main main main main main"
+    "sd main main main main main main main main"
+    "sd main main main main main main main main"
+    "sd main main main main main main main main"
+    "sd main main main main main main main main"
     "ft ft ft ft ft ft ft ft ft ";
 }
 
@@ -59,7 +67,7 @@ body {
 
 #library,
 #add_book {
-  padding: 5px;
+  padding: var(--spacing-xs);
 }
 
 #library {
@@ -70,15 +78,13 @@ body {
   grid-area: d;
 }
 
-
-
 .content {
   grid-area: main;
   background-color: var(--content-color);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-template-rows: repeat(3, auto);
-  grid-gap: 15px;
+  grid-gap: var(--spacing-md);
   padding: 15px 0 15px 15px;
 }
 
@@ -89,8 +95,9 @@ body {
   display: flex;
   flex-direction: column;
   width: 200px;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  padding: var(--spacing-xs);
 }
 
 .delete button {
@@ -163,4 +170,27 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: var(--spacing-md);
 }
+
+#new_book_modal {
+  /* display: none; */
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -100%);
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  padding: var(--spacing-xl);
+  background-color: rgb(0, 0, 0);
+  background-color: var(--header-color);
+  border-radius: var(--border-radius);
+}
+
+#new_book_modal>div {
+  padding: var(--spacing-sm);
+}
+
+
