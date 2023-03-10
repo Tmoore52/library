@@ -13,18 +13,50 @@
 <body>
     <div class="container">
         <header class="header">
-            <div id="library"><h1>Library</h1></div>
-            <div id="add_book"><button><h1>New Book</h1></button></div>
+            <div id="library">
+                <h1>Library</h1>
+            </div>
+            <div class="add_book">
+                <h1><input type="submit" value="New Book"></input></h1>
+            </div>
         </header>
         <div class="sidebar">
-
+            <div class="sort_by_genre"></div>
+            <div class="sort_by_page"></div>
         </div>
         <div class="content">
-            <div class="books">Test</div>
-            <div class="books">Test</div>
-            <div class="books">Test</div>
+            <div class="books">
+                <div class="book_title">Sky Lies</div>
+                <div class="book_author">Tyler Moore</div>
+                <div class="book_genre">Fantasy</div>
+                <div class="book_pages">250</div>
+                <div class="book_read"><button>Book Read</button></div>
+                <div class="delete"><button>Remove</button></div>
+
+            </div>
+            <div class="books">
+                <div class="book_title"></div>
+                <div class="book_author"></div>
+                <div class="book_genre"></div>
+                <div class="book_pages"></div>
+                <div class="book_read"><button>Book Read</button></div>
+                <div class="delete"><button>Remove</button></div>
+
+            </div>
+
+            <div class="books">
+                <div class="book_title"></div>
+                <div class="book_author"></div>
+                <div class="book_genre"></div>
+                <div class="book_pages"></div>
+                <div class="book_read"><button>Book Read</button></div>
+                <div class="delete"><button>Remove</button></div>
+
+            </div>
         </div>
-        <footer class="footer"></footer>
+        <footer class="footer">
+            Tyler Moore 2023
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>

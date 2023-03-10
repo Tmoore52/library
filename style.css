@@ -1,11 +1,8 @@
-body,
-html,
-h1,
-h2,
-h3 {
+* {
   margin: 0px;
   padding: 0px;
   font-family: "Roboto Slab", "Open Sans", "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 button,
@@ -18,6 +15,14 @@ input[type="reset"] {
   font: inherit;
   cursor: pointer;
   outline: inherit;
+}
+
+:root {
+  --border-radius: 10px;
+  --header-color: #a68567;
+  --content-color: #a99989;
+  --books-color: #4c372c;
+  --footer-color: #c7c4c4;
 }
 
 body {
@@ -43,7 +48,7 @@ body {
 }
 
 .header {
-  background-color: red;
+  background-color: var(--header-color);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-area: hd;
@@ -61,33 +66,101 @@ body {
   grid-area: a;
 }
 
-#add_book {
+.add_book {
   grid-area: d;
 }
 
+
+
 .content {
   grid-area: main;
-  background-color: aqua;
+  background-color: var(--content-color);
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-template-rows: repeat(3, auto);
   grid-gap: 15px;
-  padding: 15px;
+  padding: 15px 0 15px 15px;
 }
 
 .books {
   border: 5px solid;
+  background-color: var(--books-color);
+  border-radius: var(--border-radius);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  justify-content: space-between;
   align-items: center;
 }
 
+.delete button {
+  display: block;
+  width: 100%;
+}
+/* .books {
+  border: 5px solid;
+  display: grid;
+  width: 200px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  border-radius: var(--border-radius);
+  height: 100%;
+  grid-template-areas:
+    "bt bt bt"
+    "ba ba ba"
+    "bg bg bg"
+    "bp bp bp"
+    "br br br"
+    "del del del";
+  justify-items: center;
+  align-items: center;
+}
+
+.book_title {
+  grid-area: bt;
+}
+
+.book_author {
+  grid-area: ba;
+}
+
+.book_genre {
+  grid-area: bg;
+}
+
+.book_pages {
+  grid-area: bp;
+}
+
+.book_read {
+  grid-area: br;
+}
+
+.delete {
+  grid-area: del;
+  transition: filter 0.15s ease-in-out;
+}
+
+.delete:hover {
+  box-shadow: inset;
+}
+
+.book_read button,
+.delete button {
+  display: block;
+  width: 100%;
+  background-color: aliceblue;
+} */
+
 .sidebar {
   grid-area: sd;
-  background-color: yellow;
+  background-color: var(--header-color);
 }
 
 .footer {
   grid-area: ft;
-  background-color: blue;
+  background-color: var(--footer-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
