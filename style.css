@@ -89,7 +89,7 @@ body {
 }
 
 .books {
-  border: 5px solid;
+  border: 2px solid;
   background-color: var(--books-color);
   border-radius: var(--border-radius);
   display: flex;
@@ -189,8 +189,12 @@ body {
   border-radius: var(--border-radius);
 }
 
-#new_book_modal>div {
-  padding: var(--spacing-sm);
+#new_book_modal > div {
+  padding: var(--spacing-xs);
 }
 
-
+#new_book_modal > div > input {
+  border-radius: var(--border-radius);
+  border: none;
+  padding: 2px;
+}
