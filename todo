@@ -4,4 +4,6 @@
 
 
 pseudocode
-g
+Take input from User and assign to values
+Add input to Array
+Run through array and display each as a book card

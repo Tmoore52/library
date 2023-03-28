@@ -1,4 +1,17 @@
-let myLibrary = [];
+let myLibrary = [
+  {title: "Sky Lies",
+  author: "Tyler Moore",
+  genre: "Fantasy",
+  pages: 250,
+  read: true
+  }
+  {title: "Hobbit",
+  author: "JRR Tolkien",
+  genre: "Fantasy",
+  pages: 275,
+  read: true
+  }
+];
 let add_book = document.getElementById("add_book");
 let modal = document.getElementById("new_book_modal");
 let remove_modal = document.getElementById("remove_modal");
@@ -22,6 +35,8 @@ function Book(title, author, genre, pages, read) {
     return title + " by " + author + ", " + pages + ", " + read;
   };
 }
-function addBookToLibrary() {}
+function addBookToLibrary() {
+  
+}
 
 // theHobbit = new Book("The Hobbit", "J.R.R. Tolkien","295 Pages", "have read")

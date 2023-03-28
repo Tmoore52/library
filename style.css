@@ -105,60 +105,6 @@ body {
   display: block;
   width: 100%;
 }
-/* .books {
-  border: 5px solid;
-  display: grid;
-  width: 200px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  border-radius: var(--border-radius);
-  height: 100%;
-  grid-template-areas:
-    "bt bt bt"
-    "ba ba ba"
-    "bg bg bg"
-    "bp bp bp"
-    "br br br"
-    "del del del";
-  justify-items: center;
-  align-items: center;
-}
-
-.book_title {
-  grid-area: bt;
-}
-
-.book_author {
-  grid-area: ba;
-}
-
-.book_genre {
-  grid-area: bg;
-}
-
-.book_pages {
-  grid-area: bp;
-}
-
-.book_read {
-  grid-area: br;
-}
-
-.delete {
-  grid-area: del;
-  transition: filter 0.15s ease-in-out;
-}
-
-.delete:hover {
-  box-shadow: inset;
-}
-
-.book_read button,
-.delete button {
-  display: block;
-  width: 100%;
-  background-color: aliceblue;
-} */
 
 .sidebar {
   grid-area: sd;
@@ -183,7 +129,7 @@ body {
   top: 50%;
   transform: translate(-50%, -100%);
   width: 300px;
-  height: 300px;
+  height: 350px;
   text-align: center;
   padding: var(--spacing-md);
   background-color: rgb(0, 0, 0);
@@ -218,6 +164,7 @@ body {
   display: flex;
   justify-content: space-around;
   font-weight: bold;
+  padding-top: var(--spacing-sm);
 }
 #submit {
   background-color: green;
